@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="fonts/fonts.css">
     <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
   </head>
   <body>
@@ -28,19 +28,21 @@
       </nav>
 
       <div class="header-logo">
-        <img class="header-img-logo" src="./images/logo-black.svg" alt="">
+        <a href="#">
+          <img class="header-img-logo" src="./images/logo-black.svg" alt="logo">
+        </a>
       </div>
 
       <div class="contacts">
-        <p class="contacts-phone">+9 999 555 5555</p>
-        <p class="contacts-mail">info@sobaka.ge</p>
-        <p class="contacts-address">наб. Принсенграхт 263-265,<br> Амстердам</p>
+        <a href="tel:+99995555555" class="contacts-style contacts-phone">+9 999 555 5555</a>
+        <a href="mailto:info@sobaka.ge" class="contacts-style contacts-mail">info@sobaka.ge</a>
+        <a href="#" class="contacts-style contacts-address">наб. Принсенграхт 263-265,<br> Амстердам</a>
       </div>
 
     </header>
 
     <main>
-      <div class="cover">
+      <section class="cover">
           <img class="cover-img" src="./images/cover.jpg" alt="">
 
           <div class="cover-title">
@@ -65,9 +67,9 @@
             
           </div>
 
-      </div> <!--cover-->
+      </section> <!--cover-->
 
-      <div class="lots">
+      <section class="lots">
 
         <p class="lots-title">лоты</p>
 
@@ -107,9 +109,9 @@
 
         <span class="lots-show-more">посмотреть больше</span>
 
-      </div> <!--lots-->
+      </section> <!--lots-->
 
-      <div class="about">
+      <section class="about">
 
         <div class="about-logo">
           <img class="about-logo-white" src="./images/logo-white.svg" alt="">
@@ -125,7 +127,7 @@
 
         </div>
         
-      </div> <!--about-->
+      </section> <!--about-->
 
     </main>
 
@@ -141,8 +143,8 @@
 
         <div class="footer-nav">
           <p class="footer-nav-text">главная</p>
-          <p class="footer-nav-text footer-nav-text__border-bottom">посмотреть лоты</p>
-          <p class="footer-nav-text footer-nav-text__border-bottom">об аукционе</p>
+          <p class="footer-nav-text footer-nav-text__border-bottom footer-nav-text__width1">посмотреть лоты</p>
+          <p class="footer-nav-text footer-nav-text__border-bottom footer-nav-text__width2">об аукционе</p>
         </div>
 
         <div class="footer-nav-social_network">
