@@ -85,7 +85,7 @@ header {
     letter-spacing: 30px;
     text-transform: uppercase;
     opacity: .9;
-    padding: 165px 50px 135px 50px;
+    padding: 165px 30px 135px 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
