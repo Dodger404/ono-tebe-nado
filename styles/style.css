@@ -133,7 +133,6 @@ header {
     line-height: 28px;
     text-transform: uppercase;
     opacity: .9;
-    line-height: 28px;
     word-spacing: 18px;
 }
 
@@ -307,7 +306,7 @@ header {
     align-items: center;
 }
 
-.footer-nav-text__width1{
+.footer-nav-text__width1 {
     width: 149px;
 }
 
