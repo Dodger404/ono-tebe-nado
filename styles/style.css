@@ -1,10 +1,9 @@
 /* --------- Header-----------*/
 
 header {
-    height: 293px;
+    padding: 92px 51px;
     display: flex;
     align-items: center;
-    padding: 0 49px 0 51px;
 }
 
 .header-nav {
@@ -21,13 +20,14 @@ header {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1px;
 
     text-decoration: none;
 }
 
-.header-nav-link__line {
-    border-bottom: 1px solid #000;
-    padding-bottom: 1px;
+.header-nav-active {
+    border-bottom: none;
 }
 
 .header-nav__list-item {
@@ -48,12 +48,19 @@ header {
 }
 
 .contacts {
+    max-width: 240px;
     display: flex;
     flex-direction: column;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 24.3px;
+}
+
+.contacts-phone, 
+.contacts-mail {
+    border-bottom: 1px solid #000;
+    width: 133px;
 }
 
 .contacts-style {
@@ -65,15 +72,23 @@ header {
 /* Cover */
 
 .cover {
-    background: #000;
-    height: 757px;
+    background-image: url(../images/cover.jpg);
+
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-.cover-img {
-    opacity: 0.5;
-    min-width: 1440px;
-    height: 757px;
+.overlay {
+    background: #000;
+    opacity: 0.6;
     position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: 1;
 }
 
 .cover-title {
@@ -84,11 +99,13 @@ header {
     line-height: 100%;
     letter-spacing: 30px;
     text-transform: uppercase;
-    opacity: .9;
     padding: 165px 50px 135px 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    z-index: 2;
+    position: relative;
 }
 
 .cover-title p {
@@ -109,19 +126,27 @@ header {
     justify-content: end;
 }
 
+.cover-title-first,
+.cover-title-second,
+.cover-title-third {
+    display: flex;
+}
+
 .span-cover-text {
     letter-spacing: 60px;
 }
 
-.span-cover-text-o {
+.span-cover-text__last-letter {
     letter-spacing: 0;
 }
 
 .cover-button-block {
-    padding: 0 50px;
+    padding: 0 50px 50px;
     display: flex;
     align-items: center;
     justify-content: end;
+    z-index: 2;
+    position: relative;
 }
 
 .cover-text {
@@ -132,7 +157,7 @@ header {
     font-weight: 400;
     line-height: 28px;
     text-transform: uppercase;
-    opacity: .9;
+    line-height: 28px;
     word-spacing: 18px;
 }
 
@@ -143,10 +168,8 @@ header {
 }
 
 .cover-button-style {
-    width: 257px;
-    height: 52px;
+    padding: 12px 32px;
     border: 1px solid #FFF;
-    opacity: .9;
     background-color: transparent;
     cursor: pointer;
 
@@ -154,6 +177,7 @@ header {
 
     text-align: center;
     font-size: 22px;
+    font-family: inherit;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -180,32 +204,37 @@ header {
     margin: 27px 0 30px 0;
     display: flex;
     justify-content: space-between;
+    gap: 25px;
 }
 
-.lots-card {
-    background: #000;
-    height: 450px;
-    width: 430px;
-}
+.lots-card-item {
+    min-height: 450px;
+    min-width: 430px;
+    position: relative;
 
-.lots-card-img {
-    opacity: .5;
-    position: absolute;
-    height: 450px;
-    width: 430px;
-}
-
-.lots-card-content {
-    padding: 50px 40px;
-    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 50px 40px;
 }
+
+.lots-card-item__film {
+    background-image: url(../images/card-lot-01.jpg);
+}
+
+.lots-card-item__book {
+    background-image: url(../images/card-lot-02.jpg);
+}
+
+.lots-card-item__picture {
+    background-image: url(../images/card-lot-03.jpg);
+} 
 
 .lots-card-title {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: 350px;
 
     color: #FFF;
@@ -221,6 +250,7 @@ header {
 .lots-card-text {
     color: #FFF;
     width: 350px;
+    z-index: 2;
 
     font-size: 20px;
     font-style: normal;
@@ -238,6 +268,7 @@ header {
     line-height: normal;
     border-bottom: 1px solid #000;
     padding-bottom: 1px;
+    text-decoration: none;
 }
 
 /* about */
@@ -306,28 +337,28 @@ header {
     align-items: center;
 }
 
-.footer-nav-text__width1 {
-    width: 149px;
-}
-
-.footer-nav-text__width2 {
-    width: 108px;
-}
-
 .footer-nav-text {
     text-align: center;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
 
-.footer-nav-text__border-bottom {
     border-bottom: 1px solid #000;
     padding-bottom: 1px;
 }
 
-.footer-nav-social_network__svg {
-    width: 80px;
+.footer-nav-text__active {
+    border-bottom: none;
+}
+
+.footer-social_network {
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-social_network__svg {
+    width: 48px;
     height: 48px;
 }
