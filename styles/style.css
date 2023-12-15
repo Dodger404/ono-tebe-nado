@@ -203,6 +203,7 @@ header {
     display: flex;
     justify-content: space-between;
     gap: 25px;
+    flex-wrap: wrap;
 }
 
 .lots-card-item {
